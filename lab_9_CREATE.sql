@@ -1,0 +1,9 @@
+CREATE TABLE EmployeeJournal
+(NationalIDNumber NVARCHAR(MAX) NOT NULL,
+JobTitle NVARCHAR(MAX) NOT NULL,
+BirthDate date NOT NULL,
+AnniversaryFlag NVARCHAR(1) NOT NULL,
+FirstName NVARCHAR(MAX) NOT NULL,
+LastName NVARCHAR(MAX) NOT NULL,
+ThreadNumber INT NOT NULL,
+EntryDatetime DATETIME2(7) NOT NULL);
