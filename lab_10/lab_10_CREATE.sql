@@ -1,0 +1,22 @@
+CREATE SEQUENCE LegacyValuesSequence AS INT START WITH 1 INCREMENT BY 1;
+
+CREATE TABLE SourceLegacyValues
+(LegacyValue NVARCHAR(MAX),
+LegacyValueID INT DEFAULT NEXT VALUE FOR LegacyValuesSequence);
+
+INSERT INTO SourceLegacyValues(LegacyValue)
+SELECT '123'
+UNION ALL
+SELECT '456'
+UNION ALL
+SELECT '789'
+UNION ALL
+SELECT 'BROKEN';
+
+CREATE TABLE TargetLegacyValues
+(LegacyValueINT INT);
+
+
+CREATE TABLE Exceptions
+(LegacyValueID INT,
+ExceptionBody NVARCHAR(MAX));
