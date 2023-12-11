@@ -1,7 +1,7 @@
 USE	AdventureWorks2019
 GO
 
-	ALTER FUNCTION calculate_amount
+	ALTER FUNCTION CalculateTransactionAmount
 	(
 		@txn_code VARCHAR(MAX)
 	)
